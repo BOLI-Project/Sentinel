@@ -4,7 +4,7 @@ An all-powerful toolset for BolivarCoin.
 
 Sentinel is an autonomous agent for persisting, processing and automating BolivarCoin v2.0 governance objects and tasks.
 
-Sentinel is implemented as a Python application that binds to a local version 0.1 bolivarcoind instance on each BolivarCoin Masternode.
+Sentinel is implemented as a Python application that binds to a local version 0.2 bolivarcoind instance on each BolivarCoin Masternode.
 
 This guide covers installing Sentinel onto an existing 0.1 Masternode in Ubuntu 14.04 / 16.04.
 
@@ -21,7 +21,7 @@ Update system packages and ensure virtualenv is installed:
     $ sudo apt-get update
     $ sudo apt-get -y install python-virtualenv
 
-Make sure the local BolivarCoin daemon running is at least version 0.1 (10001)
+Make sure the local BolivarCoin daemon running is at least version 0.2 (2000002)
 
     $ bolivarcoin-cli getinfo | grep version
 
@@ -30,6 +30,7 @@ Make sure the local BolivarCoin daemon running is at least version 0.1 (10001)
 Clone the Sentinel repo and install Python dependencies.
 
     $ git clone https://github.com/BOLI-Project/sentinel.git && cd sentinel
+    $ mkdir database
     $ virtualenv ./venv
     $ ./venv/bin/pip install -r requirements.txt
 
