@@ -14,7 +14,7 @@ def boli_conf(**kwargs):
     defaults = {
         'rpcuser': 'bolirpc',
         'rpcpassword': 'EwJeV3fZTyTVozdECF627BkBMnNDwQaVLakG3A4wXYyk',
-        'rpcport': 29241,
+        'rpcport': 3563,
     }
 
     # merge kwargs into defaults
@@ -41,7 +41,7 @@ def test_get_rpc_creds():
         assert key in creds
     assert creds.get('user') == 'bolirpc'
     assert creds.get('password') == 'EwJeV3fZTyTVozdECF627BkBMnNDwQaVLakG3A4wXYyk'
-    assert creds.get('port') == 29241
+    assert creds.get('port') == 3563
 
     boli_config = boli_conf(rpcpassword='s00pers33kr1t', rpcport=8000)
     creds = BoliConfig.get_rpc_creds(boli_config, 'testnet')
@@ -59,7 +59,7 @@ def test_get_rpc_creds():
         assert key in creds
     assert creds.get('user') == 'bolirpc'
     assert creds.get('password') == 'EwJeV3fZTyTVozdECF627BkBMnNDwQaVLakG3A4wXYyk'
-    assert creds.get('port') == 22457
+    assert creds.get('port') == 13563
 
 
 # ensure boli network (mainnet, testnet) matches that specified in config
