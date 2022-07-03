@@ -16,12 +16,12 @@ def test_bolid():
     config_text = BoliConfig.slurp_config_file(config.boli_conf)
     network = 'mainnet'
     is_testnet = False
-    genesis_hash = u'00000e4fc293a1912b9d73cbb8d8f7270007a7d84382f1370661e65d5d57b1f6'
+    genesis_hash = u'000004ccb109d21edfb9dd8bfddacf55a26e8ae3ccb5f04898d849ea38bd118c'
     for line in config_text.split("\n"):
         if line.startswith('testnet=1'):
             network = 'testnet'
             is_testnet = True
-            genesis_hash = u'000004ccb109d21edfb9dd8bfddacf55a26e8ae3ccb5f04898d849ea38bd118c'
+            genesis_hash = u'000008c9c92d68854ca14a1d6efd46a10f5549443c858ad814eca81550138e36'
 
     creds = BoliConfig.get_rpc_creds(config_text, network)
     bolid = BoliDaemon(**creds)

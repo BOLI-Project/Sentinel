@@ -7,12 +7,12 @@ sys.path.append(os.path.normpath(os.path.join(os.path.dirname(__file__), '../../
 
 @pytest.fixture
 def valid_boli_address(network='mainnet'):
-    return 'yYe8KwyaUu5YswSYmB3q3ryx8XTUu9y7Ui' if (network == 'testnet') else 'bFML5kpSCsw2DFA16A7odGtisSUwkYcp3Y'
+    return 'mmYbPpSJwQFhVHfjP75FTBWPSJAGBXJxu8' if (network == 'testnet') else 'bFML5kpSCsw2DFA16A7odGtisSUwkYcp3Y'
 
 
 @pytest.fixture
 def invalid_boli_address(network='mainnet'):
-    return 'yYe8KwyaUu5YswSYmB3q3ryx8XTUu9y7Uj' if (network == 'testnet') else 'bFML5kpSCsw2DFA16A7odGtisSUwkYcp3Y'
+    return 'mmYbPpSJwQFhVHfjP75FTBWPSJAGBXJxu9' if (network == 'testnet') else 'bFML5kpSCsw2DFA16A7odGtisSUwkYcp3Z'
 
 
 @pytest.fixture
